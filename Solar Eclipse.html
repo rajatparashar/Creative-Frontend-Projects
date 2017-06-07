@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <title>Solar Eclipse</title>
+    <style>
+        body {
+            font-family: verdana;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            animation: colorchange 5s infinite 0.05s;
+        }
+        
+        * {
+            box-sizing: border-box;
+            border: 0px solid green;
+            margin-left: 400px;
+        }
+        
+        .sun {
+            height: 150px;
+            width: 150px;
+            border: 2px solid yellow;
+            border-radius: 50%;
+            margin: 200px;
+            background-color: yellow;
+        }
+        
+        .moon {
+            height: 145px;
+            width: 145px;
+            border-radius: 50%;
+            margin-top: -347px;
+            margin-left: 400px;
+            background-color: #000;
+            position: absolute;
+            animation: move 5s infinite;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translateX(0px);
+                background-color: #f0f0f0;
+            }
+            50% {
+                transform: translateX(-197px);
+                background-color: black;
+            }
+            100% {
+                transform: translateX(-347px);
+                background-color: #f0f0f0;
+            }
+        }
+        
+        @keyframes colorchange {
+            0% {
+                background-color: #f0f0f0;
+            }
+            50% {
+                background-color: black;
+            }
+            100% {
+                background-color: #f0f0f0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sun"></div>
+    <div class="moon"></div>
+</body>
+
+</html>
