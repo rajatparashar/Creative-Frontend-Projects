@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <title>Hover and Scale Blocks UI Concept - CSS Only!</title>
+    <style>
+        body {
+            font-family: "Raleway";
+            margin: 50px;
+            font-size: 18px;
+        }
+        
+        * {
+            transition: 0.7s ease-in-out;
+        }
+        
+        #one {
+            background-color: #9CB1FF;
+            color: #fff;
+            padding: 30px 50px;
+            position: absolute;
+        }
+        
+        #two {
+            background-color: #FFFFFF;
+            color: #000;
+            padding: 70px 30px;
+            position: absolute;
+            left: 279px;
+        }
+        
+        #three {
+            background-color: #6694FC;
+            color: #fff;
+            padding: 70px 70px;
+            position: absolute;
+            left: 427px;
+        }
+        
+        #four {
+            background-color: #706AF3;
+            color: #fff;
+            padding: 70px 39.7px;
+            position: absolute;
+            top: 130.5px;
+        }
+        
+        #five {
+            background-color: #8593E6;
+            color: #fff;
+            padding: 30px 117px;
+            position: absolute;
+            top: 211px;
+            left: 279px;
+        }
+        
+        .container {
+            box-shadow: 0 0 80px 0px #ccc;
+            width: 616px;
+            height: 242px;
+        }
+        
+        #one:hover,
+        #two:hover,
+        #three:hover,
+        #four:hover,
+        #five:hover,
+        #six:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px 1px #777;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="one" class="box">Hover Over Me!</div>
+        <div id="two" class="box">Now Here!</div>
+        <div id="three" class="box">Or Over Me!</div>
+        <div id="four" class="box">Try Hovering Here</div>
+        <div id="five" class="box">Last But Not Least</div>
+    </div>
+</body>
+
+</html>
