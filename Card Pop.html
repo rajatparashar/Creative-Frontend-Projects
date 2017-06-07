@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Card Pop</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana;
+ background-color: #eef;
+        }
+        
+        * {
+            box-sizing: border-box;
+            border: 0px solid black;
+        }
+     
+.box {
+height: 120px;
+width: 120px;
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 15px #ccc;
+position: absolute;
+top: 40%;
+left: 45%;
+transition: 0.3s;
+cursor: pointer;
+}
+   
+.box:hover {
+transform: scale(1.05);
+}
+
+h2,p {
+display: none;
+font-weight: 100;
+
+}
+p {
+color: grey;
+line-height: 1.5;
+font-size: 16px;
+}
+
+.big {
+height: 200px;
+width: 400px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 10px 40px #ccc;
+}
+     
+
+
+
+.show {
+display: block;
+}   
+    </style>
+</head>
+
+<body>
+  
+<div class="box">
+<h2>Animate all the things</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis, nisl id rhoncus volutpat.</p>
+</div>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $('.box').click(function(){
+	 $('.box').toggleClass('big');
+	  $('h2').toggleClass('show');
+  	  $('p').toggleClass('show');
+
+
+});
+            });
+    </script>
+</body>
+</html>
