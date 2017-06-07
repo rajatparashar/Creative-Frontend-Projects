@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Periodic Table</title>
+    <style>
+        body {
+            font-family: Sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+            border: 0px solid #000;
+            text-align: center;
+        }
+        
+        .periodic-table {
+            margin: auto;
+            width: 1200px;
+        }
+        
+        table {
+            empty-cells: hide;
+        }
+        
+        td,
+        tr {
+            border: 1px solid #888;
+            border-radius: 5px;
+            padding: 0;
+            width: 80px;
+            height: 50px;
+            transition: 0.2s;
+            z-index: 1;
+        }
+        
+        td>p:nth-of-type(1) {
+            font-size: 10px;
+            margin: 0;
+            margin-bottom: 4px;
+            margin-top: 2px;
+        }
+        
+        td>p:nth-of-type(2) {
+            font-style: italic;
+            font-size: 17px;
+            font-weight: 100;
+            margin: 0;
+        }
+        
+        td:nth-of-type(1) {
+            background-color: #33ccff;
+        }
+        
+        td:hover {
+            z-index: 5;
+            transform: scale(1.3);
+        }
+        
+        td:nth-of-type(3),
+        td:nth-of-type(4),
+        td:nth-of-type(5),
+        td:nth-of-type(6),
+        td:nth-of-type(7),
+        td:nth-of-type(8),
+        td:nth-of-type(9),
+        td:nth-of-type(10),
+        td:nth-of-type(11),
+        td:nth-of-type(12) {
+            background-color: #6df25f;
+        }
+        
+        td:nth-of-type(13),
+        td:nth-of-type(14),
+        tr:nth-of-type(6) td:nth-of-type(15) {
+            background-color: #ffc8c8;
+        }
+        
+        tr:nth-of-type(7) td:nth-of-type(16) {
+            background-color: #ff8eff;
+        }
+        
+        td:nth-of-type(16),
+        tr:nth-of-type(2) td:nth-of-type(14),
+        tr:nth-of-type(2) td:nth-of-type(15),
+        tr:nth-of-type(3) td:nth-of-type(15),
+        tr:nth-of-type(1) td:nth-of-type(1) {
+            background-color: #ffff32;
+        }
+        
+        td:nth-of-type(18),
+        tr:nth-of-type(7) td:nth-of-type(17) {
+            background-color: #ff8eff;
+        }
+        
+        td:nth-of-type(17),
+        tr:nth-of-type(7) td:nth-of-type(15) {
+            background-color: #ff7e62;
+        }
+        
+        tr:nth-of-type(7) td:nth-of-type(17) {
+            background-color: #33ccff;
+        }
+        
+        td:nth-of-type(2),
+        tr:nth-of-type(7) td:nth-of-type(18) {
+            background-color: #ffe0b3;
+        }
+        
+        tr:nth-of-type(2) td:nth-of-type(13),
+        tr:nth-of-type(3) td:nth-of-type(14),
+        tr:nth-of-type(4) td:nth-of-type(14),
+        tr:nth-of-type(4) td:nth-of-type(15),
+        tr:nth-of-type(5) td:nth-of-type(15),
+        tr:nth-of-type(5) td:nth-of-type(16),
+        tr:nth-of-type(6) td:nth-of-type(16) {
+            background-color: #ff99a8;
+        }
+        
+        tr:nth-of-type(8) td,
+        tr:nth-of-type(6) td:nth-of-type(3) {
+            background-color: #6cf9cf;
+        }
+        
+        tr:last-child td,
+        tr:nth-of-type(7) td:nth-of-type(3) {
+            background-color: #009dbf;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Periodic Table</h1>
+    <p>CSS Grid flag required to view in the traditional Periodic Table layout
+
+    </p>
+    <div class="periodic-table">
+
+        <table>
+            <tr>
+                <td>
+                    <p>Hydrogen</p>
+                    <p>H</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <p>Helium</p>
+                    <p>He</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Lithium</p>
+                    <p>Li</p>
+                </td>
+                <td>
+                    <p>Beryllium</p>
+                    <p>Be</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <p>Boron</p>
+                    <p>B</p>
+                </td>
+                <td>
+                    <p>Carbon</p>
+                    <p>C</p>
+                </td>
+                <td>
+                    <p>Nitrogen</p>
+                    <p>N</p>
+                </td>
+                <td>
+                    <p>Oxygen</p>
+                    <p>O</p>
+                </td>
+                <td>
+                    <p>Fluorine</p>
+                    <p>F</p>
+                </td>
+                <td>
+                    <p>Neon</p>
+                    <p>Ne</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Sodium</p>
+                    <p>Na</p>
+                </td>
+                <td>
+                    <p>Magnesium</p>
+                    <p>Mg</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <p>Aluminum</p>
+                    <p>Al</p>
+                </td>
+                <td>
+                    <p>Silicon</p>
+                    <p>Si</p>
+                </td>
+                <td>
+                    <p>Phosphorus</p>
+                    <p>P</p>
+                </td>
+                <td>
+                    <p>Sulfur</p>
+                    <p>S</p>
+                </td>
+                <td>
+                    <p>Chlorine</p>
+                    <p>Cl</p>
+                </td>
+                <td>
+                    <p>Argon</p>
+                    <p>Ar</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Potassium</p>
+                    <p>K</p>
+                </td>
+                <td>
+                    <p>CalciumLithium</p>
+                    <p>Ca</p>
+                </td>
+                <td>
+                    <p>Scandium</p>
+                    <p>Sc</p>
+                </td>
+                <td>
+                    <p>Titanium</p>
+                    <p>Ti</p>
+                </td>
+                <td>
+                    <p>Vanadium</p>
+                    <p>V</p>
+                </td>
+                <td>
+                    <p>Chromium</p>
+                    <p>Cr</p>
+                </td>
+                <td>
+                    <p>Manganese</p>
+                    <p>Mn</p>
+                </td>
+                <td>
+                    <p>Iron</p>
+                    <p>Fe</p>
+                </td>
+                <td>
+                    <p>Cobalt</p>
+                    <p>Co</p>
+                </td>
+                <td>
+                    <p>Nickel</p>
+                    <p>Ni</p>
+                </td>
+                <td>
+                    <p>Copper</p>
+                    <p>Cu</p>
+                </td>
+                <td>
+                    <p>Zinc</p>
+                    <p>Zn</p>
+                </td>
+                <td>
+                    <p>Gallium</p>
+                    <p>Ga</p>
+                </td>
+                <td>
+                    <p>Germanium</p>
+                    <p>Ge</p>
+                </td>
+                <td>
+                    <p>Arsenic</p>
+                    <p>As</p>
+                </td>
+                <td>
+                    <p>Selenium</p>
+                    <p>Se</p>
+                </td>
+                <td>
+                    <p>Bromine</p>
+                    <p>Br</p>
+                </td>
+                <td>
+                    <p>Krypton</p>
+                    <p>Kr</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Rubidium</p>
+                    <p>Rb</p>
+                </td>
+                <td>
+                    <p>Strontium</p>
+                    <p>Sr</p>
+                </td>
+                <td>
+                    <p>Yttrium</p>
+                    <p>Y</p>
+                </td>
+                <td>
+                    <p>Zirconium</p>
+                    <p>Zr</p>
+                </td>
+                <td>
+                    <p>Niobium</p>
+                    <p>Nb</p>
+                </td>
+                <td>
+                    <p>Molybdenum</p>
+                    <p>Mo</p>
+                </td>
+                <td>
+                    <p>Technetium</p>
+                    <p>Tc</p>
+                </td>
+                <td>
+                    <p>Ruthenium</p>
+                    <p>Ru</p>
+                </td>
+                <td>
+                    <p>Rhodium</p>
+                    <p>Rh</p>
+                </td>
+                <td>
+                    <p>Palladium</p>
+                    <p>Pd</p>
+                </td>
+                <td>
+                    <p>Silver</p>
+                    <p>Ag</p>
+                </td>
+                <td>
+                    <p>Cadmium</p>
+                    <p>Cd</p>
+                </td>
+                <td>
+                    <p>Indium</p>
+                    <p>In</p>
+                </td>
+                <td>
+                    <p>Tin</p>
+                    <p>Sn</p>
+                </td>
+                <td>
+                    <p>Antimony</p>
+                    <p>Sb</p>
+                </td>
+                <td>
+                    <p>Tellurium</p>
+                    <p>Te</p>
+                </td>
+                <td>
+                    <p>Iodine</p>
+                    <p>I</p>
+                </td>
+                <td>
+                    <p>Xenon</p>
+                    <p>Xe</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Cesium</p>
+                    <p>Cs</p>
+                </td>
+                <td>
+                    <p>Barium</p>
+                    <p>Ba</p>
+                </td>
+                <td>.</td>
+                <td>
+                    <p>Hafnium</p>
+                    <p>Hf</p>
+                </td>
+                <td>
+                    <p>Tantalum</p>
+                    <p>Ta</p>
+                </td>
+                <td>
+                    <p>Tungsten</p>
+                    <p>W</p>
+                </td>
+                <td>
+                    <p>Rhenium</p>
+                    <p>Re</p>
+                </td>
+                <td>
+                    <p>Osmium</p>
+                    <p>Os</p>
+                </td>
+                <td>
+                    <p>Iridium</p>
+                    <p>Ir</p>
+                </td>
+                <td>
+                    <p>Platinum</p>
+                    <p>Pt</p>
+                </td>
+                <td>
+                    <p>Gold</p>
+                    <p>Au</p>
+                </td>
+                <td>
+                    <p>Mercury</p>
+                    <p>Hg</p>
+                </td>
+                <td>
+                    <p>Thallium</p>
+                    <p>Tl</p>
+                </td>
+                <td>
+                    <p>Lead</p>
+                    <p>Pb</p>
+                </td>
+                <td>
+                    <p>Bismuth</p>
+                    <p>Bi</p>
+                </td>
+                <td>
+                    <p>Polonium</p>
+                    <p>Po</p>
+                </td>
+                <td>
+                    <p>Astatine</p>
+                    <p>At</p>
+                </td>
+                <td>
+                    <p>Radon</p>
+                    <p>Rn</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>Francium</p>
+                    <p>Fr</p>
+                </td>
+                <td>
+                    <p>Radium</p>
+                    <p>Ra</p>
+                </td>
+                <td>.</td>
+                <td>
+                    <p>Rutherfordium</p>
+                    <p>Rf</p>
+                </td>
+                <td>
+                    <p>Dubnium</p>
+                    <p>Db</p>
+                </td>
+                <td>
+                    <p>Seaborgium</p>
+                    <p>Sg</p>
+                </td>
+                <td>
+                    <p>Bohrium</p>
+                    <p>Bh</p>
+                </td>
+                <td>
+                    <p>Hassium</p>
+                    <p>Hs</p>
+                </td>
+                <td>
+                    <p>Meitnerium</p>
+                    <p>Mt</p>
+                </td>
+                <td>
+                    <p>Darmstadtium</p>
+                    <p>Ds</p>
+                </td>
+                <td>
+                    <p>Roentgenium</p>
+                    <p>Rg</p>
+                </td>
+                <td>
+                    <p>Copernicium</p>
+                    <p>Cn</p>
+                </td>
+                <td>
+                    <p>Ununtrium</p>
+                    <p>Uut</p>
+                </td>
+                <td>
+                    <p>Flerovium</p>
+                    <p>Fl</p>
+                </td>
+                <td>
+                    <p>Ununpentium</p>
+                    <p>Uup</p>
+                </td>
+                <td>
+                    <p>Livermorium</p>
+                    <p>Lv</p>
+                </td>
+                <td>
+                    <p>Ununseptium</p>
+                    <p>Uus</p>
+                </td>
+                <td>
+                    <p>Ununoctium</p>
+                    <p>Uuo</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <p>Lanthanum</p>
+                    <p>La</p>
+                </td>
+                <td>
+                    <p>Cerium</p>
+                    <p>Ce</p>
+                </td>
+                <td>
+                    <p>Praseodymium</p>
+                    <p>Pr</p>
+                </td>
+                <td>
+                    <p>Neodymium</p>
+                    <p>Nd</p>
+                </td>
+                <td>
+                    <p>Promethium</p>
+                    <p>Pm</p>
+                </td>
+                <td>
+                    <p>Samarium</p>
+                    <p>Sm</p>
+                </td>
+                <td>
+                    <p>Europium</p>
+                    <p>Eu</p>
+                </td>
+                <td>
+                    <p>Gadolinium</p>
+                    <p>Gd</p>
+                </td>
+                <td>
+                    <p>Terbium</p>
+                    <p>Tb</p>
+                </td>
+                <td>
+                    <p>Dysprosium</p>
+                    <p>Dy</p>
+                </td>
+                <td>
+                    <p>Holmium</p>
+                    <p>Ho</p>
+                </td>
+                <td>
+                    <p>Erbium</p>
+                    <p>Er</p>
+                </td>
+                <td>
+                    <p>Thulium</p>
+                    <p>Tm</p>
+                </td>
+                <td>
+                    <p>Ytterbium</p>
+                    <p>Yb</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <p>Actinium</p>
+                    <p>Ac</p>
+                </td>
+                <td>
+                    <p>Thorium</p>
+                    <p>Th</p>
+                </td>
+                <td>
+                    <p>Protactinium</p>
+                    <p>Pa</p>
+                </td>
+                <td>
+                    <p>Uranium</p>
+                    <p>U</p>
+                </td>
+                <td>
+                    <p>Neptunium</p>
+                    <p>Np</p>
+                </td>
+                <td>
+                    <p>Plutonium</p>
+                    <p>Pu</p>
+                </td>
+                <td>
+                    <p>Americium</p>
+                    <p>Am</p>
+                </td>
+                <td>
+                    <p>Curium</p>
+                    <p>Cm</p>
+                </td>
+                <td>
+                    <p>Berkelium</p>
+                    <p>Bk</p>
+                </td>
+                <td>
+                    <p>Californium</p>
+                    <p>Cf</p>
+                </td>
+                <td>
+                    <p>Einsteinium</p>
+                    <p>Es</p>
+                </td>
+                <td>
+                    <p>Fermium</p>
+                    <p>Fm</p>
+                </td>
+                <td>
+                    <p>Mendelevium</p>
+                    <p>Md</p>
+                </td>
+                <td>
+                    <p>Nobelium</p>
+                    <p>No</p>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>
