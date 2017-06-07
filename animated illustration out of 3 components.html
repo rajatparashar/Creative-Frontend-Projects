@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>animated illustration: how to out of 3 components</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: lightblue;
+        }
+        
+        .big-circle {
+            height: 30vw;
+            width: 30vw;
+            border-radius: 50%;
+            background: linear-gradient(to top, #fff 50%, #000 50%);
+            margin: 150px 0 0 36.5%;
+            box-shadow: 5px 10px 20px 0px gray;
+        }
+        
+        .white-circle {
+            height: 15vw;
+            width: 15vw;
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            top: 24.5%;
+            animation: move-white 3s infinite ease-in-out alternate;
+        }
+        
+        @keyframes move-white {
+            0% {
+                left: -120%;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        
+        .inner-black-circle {
+            height: 5vw;
+            width: 5vw;
+            border-radius: 50%;
+            background-color: #000;
+            position: relative;
+            top: 32.5%;
+            left: 33%;
+        }
+        
+        .black-circle {
+            height: 15vw;
+            width: 15vw;
+            border-radius: 50%;
+            background-color: #000;
+            position: relative;
+            top: -25.4%;
+            animation: move-black 3s infinite ease-in-out alternate;
+        }
+        
+        @keyframes move-black {
+            0% {
+                right: -160%;
+            }
+            100% {
+                right: -50%;
+            }
+        }
+        
+        .inner-white-circle {
+            height: 5vw;
+            width: 5vw;
+            border-radius: 50%;
+            background-color: #fff;
+            position: relative;
+            top: 32.5%;
+            left: 33%;
+        }
+        
+        .red-line {
+            border: 0.05em dashed red;
+            position: relative;
+            top: 50%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="big-circle">
+        <div class="red-line"></div>
+
+        <div class="white-circle">
+            <div class="red-line"></div>
+            <div class="inner-black-circle"></div>
+        </div>
+
+        <div class="black-circle">
+            <div class="red-line"></div>
+            <div class="inner-white-circle"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
