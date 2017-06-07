@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DailyCSSImages7-Ruler</title>
+    <style>
+        body {
+            padding: 0;
+            top: 250px;
+            background: linear-gradient(to right, #ccc 2%, transparent 2%), linear-gradient(to bottom, #ccc 2%, transparent 2%);
+            background-size: 50px 50px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            position: absolute;
+        }
+        
+        .ruler-body {
+            width: 70vw;
+            height: 12vw;
+            box-shadow: 0.5vw 0.7vw 0.5vw 0 #bbb;
+            transform: rotate(30deg);
+            border-bottom-right-radius: 2vw;
+            border-bottom-left-radius: 2vw;
+            background: linear-gradient(#fff, #00e6e6);
+            border: 0.2vw solid #00b3b3;
+        }
+        
+        .cm {
+            background: linear-gradient(to right, #00b3b3 2%, transparent 0%);
+            background-size: 100px 100%;
+            width: 95%;
+            left: 2.5%;
+            top: 0%;
+            height: 30%;
+        }
+        
+        .half-cm {
+            background: linear-gradient(to right, #00b3b3 3%, transparent 0%);
+            background-size: 50px 100%;
+            width: 95%;
+            top: 0%;
+            left: 2.50%;
+            height: 20%;
+        }
+        
+        .mm {
+            background: linear-gradient(to right, #00b3b3 20%, transparent 0%);
+            background-size: 10px 100%;
+            width: 95%;
+            left: 2.5%;
+            top: 0%;
+            height: 12%;
+        }
+        
+        .line {
+            border: 0.2vw solid gray;
+            background: gray;
+            width: 0%;
+            left: 2.5%;
+            border-radius: 10%;
+            top: -0.5vw;
+            animation: draw infinite 4s;
+        }
+        
+        @keyframes draw {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 95%;
+            }
+        }
+        
+        .circle {
+            width: 2.5vw;
+            height: 2.5vw;
+            border: 0.2vw solid #00b3b3;
+            border-radius: 50%;
+            background: #fff;
+            bottom: 25%;
+            left: 5%;
+            box-shadow: 0 0.5vw 0.5vw 0.2vw #aaa inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ruler-body">
+        <div class="mm"></div>
+        <div class="half-cm"></div>
+        <div class="cm"></div>
+        <div class="line"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
