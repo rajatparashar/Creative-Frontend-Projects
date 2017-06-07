@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Layered Button</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+	    font-family: Verdana;
+        }
+        
+        * {
+	box-sizing: border-box;
+	border: 0px solid #000;
+        }
+
+.wrapper {
+margin: auto;
+width: 75vw;
+height: 200px;
+padding-top: 100px;
+}
+        
+#btn {
+height: 20vh;
+width: 30vw;
+font-size: 3vw;
+color: #b2aeff;
+background-color: #000;
+border: 2px solid #b2aeff;
+position: relative;
+left: 25%;
+letter-spacing: 1.5px;
+transition: 0.3s;
+z-index: 10;
+}
+
+#btn:hover {
+transform: translate(0, -4.5vw) scale(1.07);
+cursor: pointer;
+}
+
+.line1 , .line2 , .line3 {
+position: relative;
+margin-left: 19.5vw;
+width: 29vw;
+top: -3vw;
+border: 1px solid #b2aeff;
+z-index: -10;
+}
+
+.line2 {
+width: 28vw;
+top: -2vw;
+margin-left: 20vw;
+}
+
+.line3 {
+width: 27vw;
+top: -1vw;
+margin-left: 20.5vw;
+}
+        
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<button id="btn" >HOVER ME</button>
+<div class="line1"></div>
+<div class="line2"></div>
+<div class="line3"></div>
+</div>
+</body>
+</html>
