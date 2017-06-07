@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>CSS effect for search input</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #ffd5d3;
+	font-family: Verdana;
+        }
+        
+        * {
+            box-sizing: border-box;
+	box-sizing: border-box;
+        }
+        
+h3 {
+font-weight: bold;
+position: absolute;
+top: 15%;
+width: 100%;
+text-align: center;
+color: #ff748e;
+font-size: 21px;
+}
+
+#search {
+padding: 15px;
+padding-left: 20px;
+letter-spacing: 1.5px;
+outline: none;
+border: 1px solid #000;
+border-radius: 50px;
+background-color: transparent;
+width: 40%;
+position: absolute;
+top: 28%;
+left: 30%;
+transition: 0.4s;
+}
+
+#search:hover {
+padding-left: 0;
+border:none;
+border-radius: 0;
+border-bottom: 1px solid #000;
+}
+        
+    </style>
+</head>
+
+<body>
+
+<h3>Go ahead, hover over search</h3>
+    
+<input id="search" type="text" placeholder="SEARCH">
+
+</body>
+</html>
