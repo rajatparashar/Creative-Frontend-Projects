@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Sliders</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Raleway";
+            background-color: #ffffe6;
+        }
+        
+        * {
+            box-sizing: border-box;
+            transition: 0.3s ease;
+        }
+        
+        .box {
+            background-color: #6a5393;
+            color: white;
+            border-radius: 10px;
+            width: 400px;
+            margin: 150px 500px;
+        }
+        
+        .header {
+            background-color: #5e4983;
+            text-align: center;
+            padding: 7px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+        table,
+        td {
+            padding: 15px;
+            width: 100%;
+            font-weight: 600;
+        }
+        
+        hr {
+            width: 90%;
+            border: 1px solid #fff;
+        }
+        
+        footer {
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .slider-body {
+            height: 30px;
+            width: 70px;
+            border-radius: 40px;
+            background-color: #d98c8c;
+        }
+        
+        .slider-body:hover {
+            cursor: pointer;
+        }
+        
+        .slider-control {
+            background-color: #fff;
+            height: 30px;
+            width: 30px;
+            border-radius: 40px;
+            position: relative;
+            transition: 1s ease;
+        }
+        
+        .slider-control-right {
+            position: relative;
+            left: 40px;
+            transition: 1s ease;
+        }
+        
+        .back-color {
+            background-color: #409bbf;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="header">
+            <h3>Daily UI #007</h3>
+        </div>
+
+        <table>
+            <tr>
+                <td>Disable notifications</td>
+                <td>
+                    <div class="slider-body">
+                        <div class="slider-control"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Connect with Facebook</td>
+                <td>
+                    <div class="slider-body">
+                        <div class="slider-control"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Connect with Twitter</td>
+                <td>
+                    <div class="slider-body">
+                        <div class="slider-control"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Connect with Google</td>
+                <td>
+                    <div class="slider-body">
+                        <div class="slider-control"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <footer><a href="#">Subscribe to author in Twitter</a></footer>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.slider-body').click(function() {
+                $(this).children().toggleClass('slider-control-right');
+                $(this).toggleClass('back-color');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
