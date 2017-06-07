@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Accordion / Tabs with animation</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #9f9fdf;
+        }
+        
+        * {
+            box-sizing: border-box;
+            border: 0px solid black;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        .left {
+            margin-left: 8vw;
+            margin-top: 100px;
+            display: inline-block;
+        }
+        
+        .right {
+            position: absolute;
+            display: inline-block;
+        }
+        
+        input[type="button"] {
+            padding: 10px 10px 10px 10px;
+            text-align: left;
+            width: 25vw;
+            color: #3939ac;
+            font-size: 18px;
+            background-color: #7979d2;
+            outline: none;
+            margin-top: 10px;
+            letter-spacing: 2px;
+        }
+        
+        input[type="button"]:hover {
+            cursor: pointer;
+        }
+        
+        p {
+            color: #fff;
+            text-align: justify;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        
+        #beer-data,
+        #vine-data,
+        #lemonade-data {
+            margin-left: 5vw;
+            margin-top: 90px;
+            margin-right: 80px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="left">
+
+        <input type="button" id="beer" value="Beer">
+        <br>
+        <input type="button" id="vine" value="Vine">
+        <br>
+        <input type="button" id="lemonade" value="Lemonade">
+
+    </div>
+
+    <div class="right">
+
+        <div id="beer-data">
+            <p>Beer is the world's oldest[1][2][3] and most widely consumed[4] alcoholic drink; it is the third most popular drink overall, after water and tea.[5] The production of beer is called brewing, which involves the fermentation of sugars, mainly derived from cereal grain starches—most commonly from malted barley, although wheat, maize (corn), and rice are widely used.[6] Most beer is flavoured with hops, which add bitterness and act as a natural preservative, though other flavourings such as herbs or fruit may occasionally be included. The fermentation process causes a natural carbonation effect, although this is often removed during processing, and replaced with forced carbonation.[7] Some of humanity's earliest known writings refer to the production and distribution of beer: the Code of Hammurabi included laws regulating beer and beer parlours,[8] and "The Hymn to Ninkasi", a prayer to the Mesopotamian goddess of beer, served as both a prayer and as a method of remembering the recipe for beer in a culture with few literate people.[9][10]</p>
+        </div>
+
+        <div id="vine-data">
+            <p>A vine (Latin vinea "grapevine", "vineyard", from vinum "wine") in the narrowest sense is the grapevine (Vitis), but more generally it can refer to any plant with a growth habit of trailing or scandent (that is, climbing) stems, lianas or runners. The word also can refer to such stems or runners themselves, for instance when used in wicker work.[1][2] In the United Kingdom, the term "vine" applies almost exclusively to the grapevine. The term "climber" is used for all climbing plants.[3]</p>
+        </div>
+
+        <div id="lemonade-data">
+            <p>Lemonade is any of various sweetened beverages found around the world, all characterized by lemon flavor. Most lemonade varieties can be separated into two distinct types: cloudy and clear; each is known simply as "lemonade" (or a cognate) in countries where dominant.[1] Cloudy lemonade, generally found in North America and India, is a traditionally homemade drink made with lemon juice, water, and sweetener such as cane sugar or honey.[2] Found in the United Kingdom, Ireland, South Africa, Australia, and New Zealand, clear lemonade is a lemon flavoured carbonated soft drink. Not to be confused with Sprite a lemon-lime flavored, soft drink.</p>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#beer').click(function() {
+
+                $('#beer').css('color', 'yellow');
+                $('#beer').css('border-left', '4px solid yellow');
+
+                $('#vine').css('color', '#2d2d86');
+                $('#vine').css('border-left', 'none');
+
+                $('#lemonade').css('color', '#2d2d86');
+                $('#lemonade').css('border-left', 'none');
+
+                $('#beer-data').fadeIn();
+                $('#vine-data').css('display', 'none');
+                $('#lemonade-data').css('display', 'none');
+            });
+
+            $('#vine').click(function() {
+
+                $('#beer').css('color', '#2d2d86');
+                $('#beer').css('border-left', 'none');
+
+                $('#vine').css('color', 'yellow');
+                $('#vine').css('border-left', '4px solid yellow');
+
+                $('#lemonade').css('color', '#2d2d86');
+                $('#lemonade').css('border-left', 'none');
+
+                $('#beer-data').css('display', 'none');
+                $('#vine-data').fadeIn();
+                $('#lemonade-data').css('display', 'none');
+            });
+
+            $('#lemonade').click(function() {
+
+                $('#beer').css('color', '#2d2d86');
+                $('#beer').css('border-left', 'none');
+
+                $('#vine').css('color', '#2d2d86');
+                $('#vine').css('border-left', 'none');
+
+                $('#lemonade').css('color', 'yellow');
+                $('#lemonade').css('border-left', '4px solid yellow');
+
+                $('#beer-data').css('display', 'none');
+                $('#vine-data').css('display', 'none');
+                $('#lemonade-data').fadeIn();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
