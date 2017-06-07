@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Decoration Skip Hack</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ef4800;
+        }
+        
+        a {
+            color: #fff;
+            position: fixed;
+            top: 200px;
+            left: 30%;
+            font-size: 70px;
+            font-weight: 700;
+            width: 97%;
+            text-decoration: none;
+            text-shadow: -3px -3px 0 #ef4800, 3px -3px 0 #ef4800, -3px 3px 0 #ef4800, 3px 3px 0 #ef4800;
+        }
+        
+        #line {
+            border: 2px solid #fff;
+            width: 380px;
+            position: fixed;
+            top: 41%;
+            left: 30%;
+            z-index: -10;
+            visibility: hidden;
+        }
+        
+        a:hover #line {
+            text-decoration: underline;
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#">Oligopsony
+<div id="line"></div></a>
+</body>
+
+</html>
